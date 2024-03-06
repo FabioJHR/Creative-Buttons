@@ -1,0 +1,298 @@
+* {
+  padding: 10px;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  z-index: 0;
+  background-color: #f5f7;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 225px;
+  width: 100vh;
+  font-family: sans-serif;
+}
+.Btn-1 {
+  text-decoration: none;
+  color: antiquewhite;
+  border: 2px solid antiquewhite;
+  padding: 2.5rem 5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s;
+  width: 250px;
+  height: 100px;
+  text-align: center;
+  background-color: #000;
+}
+
+.Btn-1::before {
+  content: "DOWNLOAD";
+  font-weight: bold;
+  color: #000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: antiquewhite;
+  transform: translateY(100%);
+  transition: all 1s;
+  /*center*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Btn-1:hover:before {
+  transform: translateY(0);
+}
+
+.Btn-2 {
+  padding: 2rem 3rem;
+  text-transform: uppercase;
+  background-color: blueviolet;
+  color: #fff;
+  font-size: 1.5rem;
+  position: relative;
+  text-decoration: none;
+  width: 250px;
+  height: 100px;
+}
+
+.Btn-2::before {
+  content: "button";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: crimson;
+  /* Center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*Rotation animation*/
+  transform: rotateX(270deg);
+  transform-origin: top;
+  transition: all 0.5s;
+}
+.Btn-2::after {
+  content: "button";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(14, 234, 14);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(270deg);
+  transform-origin: top;
+  transition: all 0.5s;
+  transition-delay: 0.25s;
+}
+
+.Btn-2:hover::before,
+.Btn-2:hover::after {
+  transform: rotateX(0);
+}
+
+.Btn-3 {
+  text-decoration: none;
+  color: antiquewhite;
+  text-transform: uppercase;
+  background: transparent;
+  padding: 2.5rem 5rem;
+  position: relative;
+  transition: all 0.2s;
+  width: 250px;
+  height: 100px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.Btn-3:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  background: #0a0651a4;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  transition: all 0.2s;
+  transform-origin: top;
+}
+
+.Btn-3:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 100%;
+  height: 100%;
+  background: #ffff00a6;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  transition: all 0.2s;
+  transform-origin: bottom;
+}
+
+.Btn-3:hover:before {
+  top: -6px;
+  left: 0;
+  transform: perspective(1000px) rotateX(75deg);
+}
+
+.Btn-3:hover:after {
+  top: 6px;
+  left: 0;
+  transform: perspective(1000px) rotateX(-75deg);
+}
+.Btn-3:hover {
+  color: #000;
+}
+.Btn-4 {
+  text-decoration: none;
+  color: antiquewhite;
+  text-transform: uppercase;
+  background: rgba(17, 17, 137, 0.824);
+  padding: 2.5rem 5rem;
+  position: relative;
+  transition: all 1s;
+  width: 250px;
+  height: 100px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.Btn-4:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 24px;
+  height: 24px;
+  border-top: 4px solid darkblue;
+  border-left: 4px solid darkblue;
+  transition: all 0.25s;
+}
+
+.Btn-4:hover:before,
+.Btn-4:hover:after {
+  height: 100%;
+  width: 100%;
+}
+
+.Btn-4:after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  bottom: -5px;
+  right: -5px;
+  border-bottom: 4px solid darkblue;
+  border-right: 4px solid darkblue;
+  transition: all 0.24s;
+}
+
+.Btn-5 {
+  text-decoration: none;
+  color: antiquewhite;
+  text-transform: uppercase;
+  background: white;
+  color: black;
+  border-radius: 100px;
+  padding: 2.5rem 5rem;
+  transition: all 0.2s;
+  width: 250px;
+  height: 100px;
+  text-align: center;
+  font-size: 1rem;
+  position: relative;
+}
+
+.Btn-5::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 100px;
+  transition: all 1s;
+  z-index: -1;
+}
+
+.Btn-5:hover::before {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.Btn-5:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.Btn-5:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Btn-6 {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 2.5rem 5rem;
+  position: relative;
+  transition: all 1s;
+  width: 250px;
+  height: 100px;
+  text-align: center;
+  background: teal;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.Btn-6::before {
+  border-radius: 10px;
+  background: transparent;
+  color: transparent;
+  content: "Hello World";
+  position: absolute;
+  font-weight: bold;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: translatex(100%);
+  transition: all 0.3s;
+  /*center*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Btn-6:hover:before {
+  transform: translateY(0);
+  background: gray;
+  color: black;
+}
